@@ -1,0 +1,27 @@
+.modal-dialog {
+    max-width: 90%;
+    width: auto !important;
+    height: 90%;
+}
+
+.modal-content {
+  height: 100%; 
+}
+
+.carousel-indicators {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 0;
+}
+
+.carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-top: 0;
+}
+
+.row-with-margin {
+    margin-bottom: 30px;
+}
