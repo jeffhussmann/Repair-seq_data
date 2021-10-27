@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-  <link href="styles/style.css" rel="stylesheet">
+  <link rel="icon" href="images/icon.png">
 
   <title>Repair-seq data browser</title>
 
-  <link rel="icon" href="images/icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 
 <!-- SlickGrid -->
 <style>/*
@@ -580,8 +580,7 @@ classes should alter those!
     width: 200px; /*must have*/
     height: 200px; /*must have*/
 }</style>
-<style>@import url('slick-default-theme.css');
-
+<style>
 ul {
   margin-left: 0;
   padding: 0;
@@ -589,7 +588,6 @@ ul {
 }
 
 li {
-
   list-style: none;
   margin: 0;
 }
@@ -5638,7 +5636,7 @@ if (typeof Slick === "undefined") {
 }
 </style>
 <style>
-  #pc_container {
+#pc_container {
   font-size: 12px;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   margin: 24px;
@@ -5657,9 +5655,6 @@ ul {
 }
 .dark {
   background: #222;
-}
-p {
-  width: 560px;
 }
 pre {
   color: #444;
@@ -6521,7 +6516,7 @@ pc.createAxes = function() {
             "text-anchor": "middle",
             "font-size": 20,
             "y": 0,
-            "transform": "translate(-40, " + (__.height - __.margin.top - __.margin.bottom) / 2 + ") rotate(-90)",
+            "transform": "translate(-60, " + (__.height - __.margin.top - __.margin.bottom) / 2 + ") rotate(-90)",
             "x": 0,
             "class": "y_axis_label"
           })
@@ -8420,107 +8415,190 @@ d3.divgrid = function(config) {
 };
 </script>
 
+    <link href="styles/style.css" rel="stylesheet">
 </head>
-
 <body>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        Repair-seq data browser
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <a class="navbar-brand" href="index.html">
+            Repair-seq data browser
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Double-strand break repair
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="HDR_1573.html">HDR screens with 1,573 sgRNA CRISPRi library</a></li>
-              <li><a class="dropdown-item" href="HDR_366.html">HDR screens with 366 sgRNA CRISPRi library</a></li>
-              <li><a class="dropdown-item" href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA746980" target="_blank">Raw sequencing data</a></li>
-              <li><a class="dropdown-item" href="https://doi.org/10.5281/zenodo.5555287" target="_blank">Processed data</a></li>
-              <li><a class="dropdown-item" href="https://www.cell.com/cell/fulltext/S0092-8674(21)01176-4" target="_blank">Manuscript</a>
-              </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Double-strand break repair
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="HDR_1573.html">
+                                HDR screens with 1,573 sgRNA CRISPRi library
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="HDR_366.html">
+                                HDR screens with 366 sgRNA CRISPRi library
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA746980" target="_blank">
+                                Raw sequencing data
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://doi.org/10.5281/zenodo.5555287" target="_blank">
+                                Processed data
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://www.cell.com/cell/fulltext/S0092-8674(21)01176-4" target="_blank">
+                                Manuscript
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Prime editing
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="PE_PC_frequencies.html">
+                                Parallel coordinates plot of intended prime edit frequencies
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="PE_PC_l2fcs.html">
+                                Parallel coordinates plot of log<sub>2</sub> fold changes in intended prime edit frequencies
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="PE_scatter_frequencies.html">
+                                Scatter plots of prime editing outcome frequencies
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="PE_scatter_l2fcs.html">
+                                Scatter plots of log<sub>2</sub> fold changes in prime editing outcome frequencies
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA734952" target="_blank">
+                                Raw sequencing data
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://doi.org/10.5281/zenodo.5551032" target="_blank">
+                                Processed data
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://pubmed.ncbi.nlm.nih.gov/34653350/" target="_blank">
+                                Manuscript
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Base editing
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="BE_1573.html">
+                                BE screens with 1,573 sgRNA CRISPRi library
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="BE_scatter_l2fcs.html ">
+                                Scatter plots of log<sub>2</sub> fold changes in base editing outcome frequencies
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA721212" target="_blank">
+                                Raw sequencing data
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="https://pubmed.ncbi.nlm.nih.gov/34183861/" target="_blank">
+                                Manuscript
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <a class="nav-link" href="index.html">About Repair-seq</a>
+
             </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Prime editing
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="PE_PC_frequencies.html">Parallel coordinates plot of intended prime edit frequencies</a></li>
-              <li><a class="dropdown-item" href="PE_PC_l2fcs.html">Parallel coordinates plot of log<sub>2</sub> fold changes in intended prime edit frequencies</a></li>
-              <li><a class="dropdown-item" href="PE_scatter_frequencies.html">Scatter plots of different prime editing outcome category frequencies</a></li>
-              <li><a class="dropdown-item" href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA734952" target="_blank">Raw sequencing data</a></li>
-              <li><a class="dropdown-item" href="https://doi.org/10.5281/zenodo.5551032" target="_blank">Processed data</a></li>
-              <li><a class="dropdown-item" href="https://pubmed.ncbi.nlm.nih.gov/34653350/" target="_blank">Manuscript</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Base editing
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA721212" target="_blank">Raw
-                  sequencing data</a></li>
-              <li><a class="dropdown-item" href="https://pubmed.ncbi.nlm.nih.gov/34183861/"
-                  target="_blank">Manuscript</a></li>
-            </ul>
-          </li>
-
-          <a class="nav-link" href="index.html">About Repair-seq</a>
-
-        </ul>
-      </div>
+        </div>
     </div>
-  </nav>
+</nav>
+<div class="container" style="width: 1180px; margin-left: 50px; margin-top: 10px;">
+<div style="display: flex">
+<h2>
+Parallel coordinates plot of intended prime edit frequencies
+</h2>
+<a style="margin-left: auto" href="#Modal" data-bs-toggle="modal" data-bs-target="#Modal">
+<img id="help-button" src="images/question-square.svg" alt="Bootstrap" width="40" height="40">
+</a>
 
-<div id="pc_container"></div>
-<div id="parallel_coordinates" class="parcoords" style="height:800px;"></div>
-<div id="search_box">
-Search: <input type="text" id="search" value="">
-<button id="clear_constraints">Clear all constraints</button>
-Highlight on hover: <input type="checkBox" id="hover_checkbox" checked>
-<!---Label by: <select id="label_by"></select>--->
-<!---<button id="download_screenshot">Download screenshot</button>--->
-<button id="export_table">Export table</button>
 </div>
-<div id="grid" style="width:1200px;"></div>
+Lines represent individual CRISPRi sgRNAs, and columns represent distinct screens. Lines plots the frequency of the intended substitution prime edit in the presence of each sgRNA across 10 different screen conditions.
+
 </div>
-<script id="brushing">function color_from_alpha(alpha) {
-    return function(d) {
-        return d['_color'] + alpha + ")";
-    }
+
+
+<div class="container" style="width: 1180px; margin-left: 50px;">
+  <div class="row">
+    <div id="parallel_coordinates" class="parcoords" style="height: 600px"></div>
+  </div>
+
+  <div class="row justify-content-center" id="search_box">
+    <div class="col-md-auto">
+      Search: <input type="text" id="search" value="" autocomplete="off">
+      <button id="clear_constraints">Clear all constraints</button>
+      Highlight on hover: <input type="checkBox" id="hover_checkbox" checked>
+      <!---Label by: <select id="label_by"></select>--->
+      <!---<button id="download_screenshot">Download screenshot</button>--->
+      <button id="export_table">Export table</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="grid" style="width: 1180px;"></div>
+  </div>
+
+</div>
+
+<script id="brushing">
+  
+function color_from_alpha(alpha) {
+  return function(d) {
+      return d['_color'] + alpha + ")";
+  }
 }
 
 var parcoords = d3.parcoords()("#parallel_coordinates")
     .mode("queue") // progressive rendering
     .rate(500)
     .color(color_from_alpha(0.3))
-    .brushedColor(color_from_alpha(0.5))
-    .highlightColor(color_from_alpha(0.7))
-    .width(1200)
+    .brushedColor(color_from_alpha(0.75))
+    .highlightColor(color_from_alpha(0.9))
+    .width(1180)
     .margin({
-        top: 150,
-        left: 40,
+        top: 100,
+        left: 100,
         right: 100,
-        bottom: 16
+        bottom: 30,
     });
 
 var intersectionPoints;
@@ -8731,10 +8809,14 @@ data = d3.csv('data:text/plain;base64,Q1JJU1BSaSBzZ1JOQSxLNTYyIFBFMiByZXAxLEs1Nj
 
         // Highlight that element in the parallel coordinates graph
         parcoords.highlight([d[elementPos]]);
+        addTooltip([d[elementPos]], [intersectionPoints[elementPos]]);
+
+        // Add tooltips...
     });
 
     grid.onMouseLeave.subscribe(function(e,args) {
         parcoords.unhighlight();
+        cleanTooltip();
     });
 
     // fill grid with data
@@ -8927,7 +9009,6 @@ data = d3.csv('data:text/plain;base64,Q1JJU1BSaSBzZ1JOQSxLNTYyIFBFMiByZXAxLEs1Nj
 
     function addTooltip(currentData, currentIntersectionPoints) {
         var tooltipData = getTooltipData(currentData, currentIntersectionPoints);
-
         var fontSize = 10;
 
         parcoords.svg.selectAll('text .hover_tooltip')
@@ -8948,8 +9029,6 @@ data = d3.csv('data:text/plain;base64,Q1JJU1BSaSBzZ1JOQSxLNTYyIFBFMiByZXAxLEs1Nj
         var tooltipData = [];
 
         var label_by = "CRISPRi sgRNA" //d3.select('#label_by').property('value');
-
-        console.log('here');
 
         for (var i = 0; i < currentData.length; i++) {
             for (var column of [0, currentIntersectionPoints[i].length - 1]) {
@@ -9010,12 +9089,148 @@ data = d3.csv('data:text/plain;base64,Q1JJU1BSaSBzZ1JOQSxLNTYyIFBFMiByZXAxLEs1Nj
         }
         var csv_content = "data:text/csv;charset=utf-8,";
         csv_content += lines.join('\n');
-        var encoded = encodeURI(csv_content)
-        var link = document.createElement('a')
-        link.setAttribute('href', encoded)
-        link.setAttribute('download', 'table_contents.txt')
-        link.click()
+        var encoded = encodeURI(csv_content);
+        var link = document.createElement('a');
+        link.setAttribute('href', encoded);
+        link.setAttribute('download', 'table_contents.txt');
+        link.click();
     }
 });
 </script>
+<!-- reminder of data keys
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal">
+Help
+</button>
+-->
+
+<div class="modal fade" id="Modal" tabindex="-1">
+    <div class="modal-dialog" style="height: 95%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Interacting with parallel coordinates plots</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid" style="padding-top: 10px; height: 100%;">
+
+                    <div id="Carousel" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-interval="false">
+                        <div class="carousel-indicators">
+                            
+                            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="0"  class="active" ></button>
+                            
+                            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="1" ></button>
+                            
+                            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="2" ></button>
+                            
+                            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="3" ></button>
+                            
+                            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="4" ></button>
+                            
+                            <button type="button" data-bs-target="#Carousel" data-bs-slide-to="5" ></button>
+                            
+                        </div>
+
+                        <div class="carousel-inner">
+                            
+                            <div class="carousel-item  active ">
+                                <div class="carousel-caption d-block">
+                                    <h5>Identifying lines</h5>
+                                    <div class="mx-auto" style="width: 800px">
+                                        <p style="text-align: left;">
+                                        Mouseover a line to highlight and label it.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <img src="images/tutorials/PC_00_mouseover_lines.gif" class="d-block w-75" alt="..." style="margin: auto; max-width: 800px; border-style: solid;">
+                                
+                            </div>
+                            
+                            <div class="carousel-item ">
+                                <div class="carousel-caption d-block">
+                                    <h5>Searching for specific genes</h5>
+                                    <div class="mx-auto" style="width: 800px">
+                                        <p style="text-align: left;">
+                                        To search for specific sgRNAs, type into the search box and press enter.<br>Matching sgRNAs will be highlighted and will populate the table below. Mouseover rows in the table to identify corresponding lines.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <img src="images/tutorials/PC_01_search.gif" class="d-block w-75" alt="..." style="margin: auto; max-width: 800px; border-style: solid;">
+                                
+                            </div>
+                            
+                            <div class="carousel-item ">
+                                <div class="carousel-caption d-block">
+                                    <h5>Brushing data ranges</h5>
+                                    <div class="mx-auto" style="width: 800px">
+                                        <p style="text-align: left;">
+                                        Click and drag on an axis to "brush" a data range, highlighting sgRNAs with values in this range.<br>Once a brush exists, click and drag on its edge to resize it, or click and drag on its middle to move it.<br>Brush multiple axes to apply multiple constraints.<br>Click outside of a brush on an axis to clear that brush. Click the "Clear all constraints" button to remove all brushes.<br>
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <img src="images/tutorials/PC_02_brushing.gif" class="d-block w-75" alt="..." style="margin: auto; max-width: 800px; border-style: solid;">
+                                
+                            </div>
+                            
+                            <div class="carousel-item ">
+                                <div class="carousel-caption d-block">
+                                    <h5>Reordering axes</h5>
+                                    <div class="mx-auto" style="width: 800px">
+                                        <p style="text-align: left;">
+                                        Click and drag on an axis label to reorder axes.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <img src="images/tutorials/PC_03_reordering.gif" class="d-block w-75" alt="..." style="margin: auto; max-width: 800px; border-style: solid;">
+                                
+                            </div>
+                            
+                            <div class="carousel-item ">
+                                <div class="carousel-caption d-block">
+                                    <h5>Zooming in and out</h5>
+                                    <div class="mx-auto" style="width: 800px">
+                                        <p style="text-align: left;">
+                                        With the mouse positioned over an axis, scroll the mouse wheel to zoom in and out.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <img src="images/tutorials/PC_04_zoom.gif" class="d-block w-75" alt="..." style="margin: auto; max-width: 800px; border-style: solid;">
+                                
+                            </div>
+                            
+                            <div class="carousel-item ">
+                                <div class="carousel-caption d-block">
+                                    <h5>About</h5>
+                                    <div class="mx-auto" style="width: 800px">
+                                        <p style="text-align: left;">
+                                        Plots built using <a href="https://d3js.org/" target="_blank">D3.js</a>, including adapted code from <a href="https://github.com/syntagmatic/parallel-coordinates" target="_blank">github.com/syntagmatic/parallel-coordinates</a>, <a href="http://bl.ocks.org/mostaphaRoudsari/b4e090bb50146d88aec4" target="_blank">bl.ocks.org/mostaphaRoudsari/b4e090bb50146d88aec4</a>, and <a href="https://bl.ocks.org/jasondavies/1341281" target="_blank">bl.ocks.org/jasondavies/1341281</a>.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#Carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span>Previous</span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#Carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+</html>

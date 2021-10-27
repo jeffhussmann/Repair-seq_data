@@ -1,0 +1,34 @@
+title: 'Interacting with parallel coordinates plots'
+slides:
+  - title: 'Identifying lines'
+    text: 'Mouseover a line to highlight and label it.'
+    gif_fn: 'images/tutorials/PC_00_mouseover_lines.gif'
+
+  - title: 'Searching for specific genes'
+    text: |
+      To search for specific sgRNAs, type into the search box and press enter.
+      Matching sgRNAs will be highlighted and will populate the table below. Mouseover rows in the table to identify corresponding lines.
+    gif_fn: 'images/tutorials/PC_01_search.gif'
+
+  - title: 'Brushing data ranges'
+    text: |
+      Click and drag on an axis to "brush" a data range, highlighting sgRNAs with values in this range.
+      Once a brush exists, click and drag on its edge to resize it, or click and drag on its middle to move it.
+      Brush multiple axes to apply multiple constraints.
+      Click outside of a brush on an axis to clear that brush. Click the "Clear all constraints" button to remove all brushes.
+    gif_fn: 'images/tutorials/PC_02_brushing.gif'
+
+  - title: 'Reordering axes'
+    text: 'Click and drag on an axis label to reorder axes.'
+    gif_fn: 'images/tutorials/PC_03_reordering.gif'
+
+  - title: 'Zooming in and out'
+    text: 'With the mouse positioned over an axis, scroll the mouse wheel to zoom in and out.'
+    gif_fn: 'images/tutorials/PC_04_zoom.gif'
+
+  - title: 'About'
+    text: >
+      Plots built using <a href="https://d3js.org/" target="_blank">D3.js</a>,
+      including adapted code from <a href="https://github.com/syntagmatic/parallel-coordinates" target="_blank">github.com/syntagmatic/parallel-coordinates</a>,
+      <a href="http://bl.ocks.org/mostaphaRoudsari/b4e090bb50146d88aec4" target="_blank">bl.ocks.org/mostaphaRoudsari/b4e090bb50146d88aec4</a>,
+      and <a href="https://bl.ocks.org/jasondavies/1341281" target="_blank">bl.ocks.org/jasondavies/1341281</a>.
