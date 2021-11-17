@@ -1,19 +1,19 @@
 title: Interacting with UMAP plots
 slides:
   - title: Selecting CRISRPi sgRNAs
-    text: >
+    text: |
       Selecting a CRISPRi sgRNA in the dropdown menu colors outcomes by the effect of that sgRNA and updates the bottom plot to show correlations with the selected sgRNA.
       The top 10 sgRNAs with highest correlation to the selected sgRNA are labelled. 
       Alternatively, with focus on the menu, type an sgRNA identity and press Enter, or use the up and down arrow keys to cycle through sgRNAs.
     gif_fn: 'images/tutorials/UMAP_01_menu.gif'
 
   - title: Visualizing other outcome properties
-    text: >
+    text: |
         Click on tabs above the main plot to see how other properties of outcomes are distributed across the UMAP.
     gif_fn: 'images/tutorials/UMAP_02_tabs.gif'
 
   - title: Comparing CRISPRi sgRNAs
-    text: >
+    text: |
         To compare the effects of CRISPRi sgRNAs, mouse over an sgRNA's point in the bottom plot to pop up a second copy of the outcome UMAP colored by changes in frequency for this second sgRNA.
     gif_fn: 'images/tutorials/UMAP_03_comparison.gif'
 
